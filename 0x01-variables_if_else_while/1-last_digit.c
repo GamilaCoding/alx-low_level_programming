@@ -3,7 +3,7 @@
 #include <time.h>
 /**
  * main - main block
- * Description: Get a random number and check its last digit, comprare it with 5
+ * Description: Get a random number and check its last digit, compr *are it with 5
  * Return: Always 0
  */
 int main(void)
