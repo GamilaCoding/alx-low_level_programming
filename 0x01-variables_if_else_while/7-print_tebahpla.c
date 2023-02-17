@@ -4,7 +4,7 @@
 /**
  * main - main block
  * Descriptaion: prints all signal digit number of base 10
- * starting from 0, followed by new line 
+ *starting from 0, followed by new line.
  * Return: 0
  */
 int main(void)
@@ -13,7 +13,7 @@ int main(void)
 	while (c >= 'a')
 	{
 		putchar(c);
-		c++;
+		c--;
 	}
 	putchar('\n');
 	return (0);
