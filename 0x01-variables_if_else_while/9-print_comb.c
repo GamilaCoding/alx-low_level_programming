@@ -1,20 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - Entry point 
- * Return: Always 0 (success)
+*main - Entry point 
+*Return: Always 0 (success)
  */
 int main(void)
 {
-	int c =  0;
+int n;
 
-	while (c < 10)
-	{
-	putchar(48 + c);
-        if (c != 9)
-	{
-	putchar(',');
-	putchar(' ');
-	}
-	c++;
-	}
+
+n = 48;
+
+while (n <= 57)
+/*57 corresponds with ascii character9*/
+{
+putchar(n);
+if (n != 57)
+{
+putchar(',');
+putchar(' ');
+}
+n++;
+}
+putchar ('\n');
+return (0);
+}
