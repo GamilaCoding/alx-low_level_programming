@@ -8,7 +8,6 @@
 int main(void)
 {
 	char la;
-
 	for (la = 'a'; la <= '2'; a++)
 	{
 		if (la != 'e' && la != 'q')
