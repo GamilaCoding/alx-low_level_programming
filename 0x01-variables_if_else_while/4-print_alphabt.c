@@ -2,16 +2,19 @@
 
 /**
  * main - prints the alpabet in lowercase
- * followed by a new line, expect q and e
+ * Description: get a random number and check its
  * Return: Alawys 0
  */
 int main(void)
 {
-	char la;
-	for (la = 'a'; la <= '2'; a++)
+	char c = 'a';
+	while (c <= 'z')
 	{
-		if (la != 'e' && la != 'q')
-			putchar(la);
+		if (c != 'e' && c != 'q')
+		{
+			putchar(c);
+		}
+		c++;
 	}
 	putchar('\n');
 	
