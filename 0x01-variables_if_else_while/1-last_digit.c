@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - main block
- * Description: Get a random number and check its last digit, compr *are it with 5
+ * main - Determine if the last digit of a random number is
+ * greater than or less than 5, or is zero..
  * Return: Always 0
  */
 int main(void)
