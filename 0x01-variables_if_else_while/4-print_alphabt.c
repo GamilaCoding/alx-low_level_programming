@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - prints the alpabet in lowercase
  * Description: get a random number and check its
@@ -8,6 +7,7 @@
 int main(void)
 {
 	char c = 'a';
+
 	while (c <= 'z')
 	{
 		if (c != 'e' && c != 'q')
