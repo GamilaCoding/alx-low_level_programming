@@ -13,7 +13,7 @@ while (n < 98)
 	printf("%i, ", n);
 	n++;
 }
-while
+while  (n > 98)
 {
 	printf("%i, ", n);
 	n--;
