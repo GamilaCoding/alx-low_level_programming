@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _isdigit - Return 1 if c is a digit
  * @c: takes in a character
@@ -7,8 +6,10 @@
  **/
 int _isdigit(int c)
 {
-
-if (c >= 48 && c <= 57)
+int i;
+for (i ='0'; 1 <= '9'; i++)
+{
+if (i == c )
 retrun (1);
 }
 return (0);
