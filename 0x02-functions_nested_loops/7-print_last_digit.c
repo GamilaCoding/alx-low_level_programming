@@ -1,11 +1,23 @@
 #include "main.h"
-
 /**
- * _abs - return abs value
- * @n : number to check
- * Return: 0 or 1
+ * print_last_digit - print the last digit of a number
+ * @n: int type number
+ * Return: return value of last digit
  */
-int _abs(int n)
+int print_last_digit(int n)
 {
-return (n >= 0 ? n : n * -1);
+int nv;
+
+if (n < 0)
+{
+nv = -1 * (n % 10);
+_putchar(nv + '0');
+return (nv);
+}
+else
+{
+nv = n % 10;
+_putchar(nv + '0');
+return (nv);
+}
 }
