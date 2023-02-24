@@ -6,11 +6,8 @@
  **/
 int _isdigit(int c)
 {
-int i;
-for (i ='0'; 1 <= '9'; i++)
-{
-if (i == c )
+if (c >= '0' && c <= '9')
 retrun (1);
-}
+else
 return (0);
 }
