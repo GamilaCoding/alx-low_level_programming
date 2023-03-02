@@ -1,4 +1,4 @@
 0x06-pointers-arrays-strings
-/*Tasks*/
-
-printf("Task 0-strcat.c \n")
+#Tasks
+Task 0-strcat.c
+Task 1-strncat.c
