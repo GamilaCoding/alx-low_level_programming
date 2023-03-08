@@ -1,21 +1,10 @@
-Low level programming for 
+# Low level programming for ALX
 
 
-
-
-     _____     ______     _____  _____  
-    /  _  \    |    |     \    \/    / 
-   /  /_\  \   |    |      \   ||   /   
-  /    |    \  |    |___   /   ||   \   
- /  __/ \__  \ |___ _ ___\/    /\    \  
-/____/   \____\|_________/____/  \    \
-                                  \____\
-
-
+Tasks follow by
 
 # 0x00. C - Hello World
 
-Tasks follow by
 
 # 0x01-variables_if_else_while
 
