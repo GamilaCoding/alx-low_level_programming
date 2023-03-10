@@ -28,3 +28,4 @@ What is a function and how do you use functions?
 # 0x07-pointers_arrays_strings
 
 # 0x08-recursion
+# 0x09-static_libraries
