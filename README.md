@@ -4,13 +4,14 @@
 Tasks follow by
 
 # 0x00. C - Hello World
-
+For this project, we expect you to look at this concept: C programming
 
 # 0x01-variables_if_else_while
 
 
 # 0x02-functions_nested_loops
-
+What are nested loops and how to use them?
+What is a function and how do you use functions?
 
 # 0x03-debugging
 
