@@ -18,3 +18,6 @@ What is a function and how do you use functions?
 # 0x09-static_libraries
 # 0x0A-argc_argv
 # 0x0B-malloc_free
+
+
+every task countine README.md and headers files
