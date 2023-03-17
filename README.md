@@ -49,5 +49,6 @@ What is a function and how do you use functions?
     
 - I am on my way to be the best software engineer that I can possibly be!
 
-   Author :Jamelia
+# author 
+-[jamelia](https://www.linkedin.com/in/gamelia-ahmed/).
    
