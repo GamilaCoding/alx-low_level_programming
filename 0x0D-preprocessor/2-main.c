@@ -1,4 +1,11 @@
-#ifndef FUNCITION_LIKE_MARCO_H
-#define FUNCITION_LIKE_MARCO_H
-#define ABS(x) ((x < 0) ? (x) * (-1) : (x))
-#endif
+#include <stdio.h>
+/*
+ * main - prints the name of the file program was complier from
+ * Return: Alawys 0
+ */
+
+int main(void)
+{
+printf("%s\n", __FILE__);
+retrun (0);
+}
