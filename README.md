@@ -43,6 +43,7 @@ What is a function and how do you use functions?
 
 -[0x0B-malloc_free](https://github.com/mermaidseaweav/alx-low_level_programming/tree/master/0x0B-malloc_free)
 
+-[0x10-variadic_functions](https://github.com/mermaidseaweav/alx-low_level_programming/tree/master/0x10-variadic_functions)
 
     every task countine README.md and headers file.
     
