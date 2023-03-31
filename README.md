@@ -1,7 +1,10 @@
-# Low level programming for ALX
+![MasterHead](https://nanodegree.alxafrica.com/wp-content/uploads/2022/03/alx-logo.png)
 
 
-# Tasks follow by
+# C Low level programming 
+
+
+# Tasks:
 
 -[ 0x00. C - Hello World](https://github.com/mermaidseaweav/alx-low_level_programming/tree/master/0x00-hello_world)
 
