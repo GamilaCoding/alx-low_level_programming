@@ -21,7 +21,7 @@ typedef struct listint_s
 {
     int n;
     struct listint_s *next;
-} listint-t; 
+} listint-t; ##
 
 # Tasks
 ## 0-print list
