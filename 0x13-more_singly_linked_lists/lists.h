@@ -6,7 +6,7 @@
  * @next: points to the next node
  *
  * Description: singly linked list node structure
- * 
+ * for ALX project
  */
 typedef struct listint_s
 {
@@ -24,4 +24,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n);
 int sum_listint(listint_t *head);
 int delete_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 void free_listint2(listint_t **head);
+size_t free_listinT_t_safe(listint_t **h);
+size_t print_listint_safe(const lisint_t *head);
+listint_t *insert_nodeint_t_index(listint_t **head, unsigned int idx, int n);
 #endif
