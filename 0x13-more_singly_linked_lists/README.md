@@ -8,8 +8,9 @@
  - any use of function like printf, puts , calloc, realloc etc.. is forbidden
  - You don’t have to push _putchar
 # More Info 
-use this data structure for this project :
- ## /**
+ ## use this data structure for this project :
+ 
+/**
  * struct listint_s - singly linked list
  * @n: integer
  * @next: points to the next node
@@ -21,7 +22,7 @@ typedef struct listint_s
 {
     int n;
     struct listint_s *next;
-} listint-t; ##
+} listint-t; 
 
 # Tasks
 ## 0-print list
