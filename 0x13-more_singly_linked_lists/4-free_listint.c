@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * listint_t - a func that frees a list
- * @head: apointer point to the head of a list
+ * free_listint - a func that frees a list
+ * @head: a pointer point to the head of a list
  */
 void free_listint(listint_t *head)
 {
