@@ -1,5 +1,6 @@
-#define LISTS_H_H
-#ifdef LISTS_H_H
+#define LISTS_H
+#ifdef LISTS_H
+#include <stddef.h>
 /**
  * struct listint_s - singly linked list
  * @n: integer
@@ -24,7 +25,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n);
 int sum_listint(listint_t *head);
 int delete_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 void free_listint2(listint_t **head);
-size_t free_listinT_t_safe(listint_t **h);
-size_t print_listint_safe(const lisint_t *head);
+size_t free_listint_t_safe(listint_t **h);
+size_t print_listint_safe(const listint_t *head);
 listint_t *insert_nodeint_t_index(listint_t **head, unsigned int idx, int n);
 #endif
