@@ -26,7 +26,7 @@ return (new_node);
 }
 next_ptr = next_ptr->next;
 
-while (nex_ptr->next != NULL)
+while (next_ptr->next != NULL)
 next_ptr = next_ptr->next;
 next_ptr->next = new_node;
 return (new_node);
