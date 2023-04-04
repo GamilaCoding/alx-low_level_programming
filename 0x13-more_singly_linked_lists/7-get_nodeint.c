@@ -17,7 +17,7 @@ for (i = 0; i < index; i += 1)
 {
 if (next_ptr == NULL)
 	return (NULL);
-next_ptr = next_ptr = next_ptr->next;
+next_ptr = next_ptr->next;
 }
 return (next_ptr);
 }
