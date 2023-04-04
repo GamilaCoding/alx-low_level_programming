@@ -1,5 +1,5 @@
-#define "LISTS_H_H"
-#ifndef "LISTS_H_H"
+#define "LISTS_H"
+#ifndef "LISTS_H"
 /*
  * struct_listint_s - signly linked list
  * @n: integar
