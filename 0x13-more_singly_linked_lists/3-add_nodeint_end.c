@@ -24,7 +24,7 @@ if (*head == NULL)
 *head = new_node;
 return (new_node);
 }
-next_ptr = next_ptr->next;
+next_ptr = *head;
 
 while (next_ptr->next != NULL)
 next_ptr = next_ptr->next;
