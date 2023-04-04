@@ -3,11 +3,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * add_node_end - adds a new node at the endof list 
- * @head : a pointer to pointer to a struct
- * @n: holds the data for the node 
- * Return: the address of the new element,or NULL if it filed
- */
+*add_nodeint_end- adds a new node at the endof list 
+*@head: a pointer to pointer to a struct
+*@n: holds the data for the node 
+*Return: the address of the new element,or NULL if it failed
+*/
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 listint_t *next_ptr;
