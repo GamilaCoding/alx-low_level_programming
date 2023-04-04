@@ -16,11 +16,11 @@ int content;
 
 if (*head == NULL)
 return (0);
-
+content = 0;
 popped = *head;
-content = popped->n;
-free(popped);
+content = (*popped)->n;
 
 *head = (*head)->next;
+free(popped);
 return (content);
 }
