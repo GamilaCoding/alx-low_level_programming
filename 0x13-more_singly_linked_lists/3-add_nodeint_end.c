@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
-*add_nodeeint_end - adds a new node at the end of list
+*add_nodeint_end - adds a new node at the end of list
 *@head: a pointer to a pointer to a struct
 *@n: holds the data for the node
 *Return: the address of the new element, or NULL if it failed
