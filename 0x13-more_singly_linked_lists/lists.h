@@ -1,5 +1,7 @@
-#define LISTS_H
 #ifndef LISTS_H
+#define LISTS_H
+#include <stdio.h>
+#include <stdlib.h>
 /*
  * struct_listint_s - signly linked list
  * @n: integar
