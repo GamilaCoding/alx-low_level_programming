@@ -16,7 +16,7 @@ size_t size;
 size = 0;
 if (head == NULL)
 return (0);
-s_ptr = head;
+f_ptr = head;
 f_ptr = head->next;
 while (f_ptr != NULL && f_ptr < s_ptr)
 {
