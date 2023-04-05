@@ -30,8 +30,8 @@ next_ptr = next_ptr->next;
 }
 new_node = malloc(sizeof(listint_t));
 if (!new_node)
-new_node->n = n;
 return (NULL);
+new_node->n = n;
 if (idx == 0)
 *head = new_node;
 else
