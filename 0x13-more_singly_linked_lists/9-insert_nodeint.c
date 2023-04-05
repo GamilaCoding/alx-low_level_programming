@@ -2,10 +2,9 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-
 /**
 *insert_nodeint_at_index - a function that insert 
-*a new node at given position
+*new node at given position
 *@head: a pionter to pointer to struct 
 *@idx: the of index the new list where the new node
 *should be added index starts 0
@@ -31,8 +30,8 @@ next_ptr = next_ptr->next;
 }
 new_node = malloc(sizeof(listint_t));
 if (!new_node)
-return (NULL);
 new_node->n = n;
+return (NULL);
 if (idx == 0)
 *head = new_node;
 else
