@@ -1,111 +1,90 @@
 #include "main.h"
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-/**
-*check97 - checks for the correct number of arguments
-*@argc: number of arguments
-*
-*Return: void
-*/
+#define BUF_SIZE 1024
 
-void check97(int argc)
-{
-if (argc != 3)
-{
-dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-exit(97);
-}
-}
 /**
-*check98 -checks that file_from exists and can be read.
-*@check: checks if true of false
-*@file: file from name
-*@fd_from: file descriptation of file_to, or -1
-*@fd_to: file descripation of file_to, or -1
-*Return: void
-*/
-void check98(ssize_t check, char *file, int fd_from, int fd_to)
+* main - main
+* @argc: number of arguments
+* @argv: a pointer point to the array of arguments
+* Return: Always 0
+**/
+
+int main(int argc, char **argv)
 {
-if (check == -1)
-{
-dprintf(STDERR_FILENO, "Eroor: Can't read from file %s\n", file);
-if (fd_from != -1)
-close(fd_from);
-if (fd_to != -1)
-close(fd_to);
-exit(98);
-}
-}
-/**
- *check99 - checks that file_to was created and/or can be written to
- *@check: checks if true of false
- *@file: file to name
- *@fd_from: file descripation of fle_from, or -1
- *@fd_to: file descripation of file_to, or -1
- *
- * Return: void
-*/
-void check99(ssize_t check, char *file, int fd_from, int fd_to)
-{
-if (check == -1)
-{
-dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
-if (fd_from != -1)
-close(fd_from);
-if (fd_to != -1)
-close(fd_to);
-exit(99);
-}
-}
-/**
- *check100 - checks that file descripation were closed properly
- * @check: checks if true or false
- * @fd: file descriptor
- *
- * Return: void
- */
-void check100(int check, int fd)
-{
-	if (check == -1)
+	int f0, f1, res0, res1;
+	char *buffer;
+
+	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	buffer = malloc(sizeof(char) * BUF_SIZE);
+	if (!buffer)
+		return (0);
+
+	f1 = open(argv[1], O_RDONLY);
+	error_98(f1, buffer, argv[1]);
+	f0 = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	error_99(f0, buffer, argv[2]);
+	do {
+		res0 = read(f1, buffer, BUF_SIZE);
+		if (res0 == 0)
+			break;
+		error_98(res0, buffer, argv[1]);
+		res1 = write(f0, buffer, res0);
+		error_99(res1, buffer, argv[2]);
+	} while (res1 >= BUF_SIZE);
+	res0 = close(f0);
+	error_100(res0, buffer);
+	res0 = close(f1);
+	error_100(res0, buffer);
+	free(buffer);
+	return (0);
+}
+
+/**
+* error_98 - checks error 98
+* @f0: the value to check
+* @buffer: the buffer
+* @argv: argument
+**/
+void error_98(int f0, char *buffer, char *argv)
+{
+
+	if (f0 < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv);
+		free(buffer);
+		exit(98);
+	}
+}
+
+/**
+* error_99 - checks error 99
+* @f0: value to check
+* @buffer: the buffer
+* @argv: argument
+*/
+void error_99(int f0, char *buffer, char *argv)
+{
+	if (f0 < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv);
+		free(buffer);
+		exit(99);
 	}
 }
 /**
- * main - opies the content of a file to another file.
- * @argc: number of arguments passed
- * @argv: array of pointers to the arguments
- *
- * Return: 0 on success
- */
-int main(int argc, char *argv[])
+* error_100 - checks error 100
+* @f0: the value to check
+* @buffer: the buffer
+*/
+void error_100(int f0, char *buffer)
 {
-int fd_from, fd_to, close_to, close_from;
-ssize_t lenr, lenw;
-char buffer[1024];
-mode_t file_perm;
-
-check97(argc);
-fd_from = open(argv[1], O_RDONLY);
-check98((ssize_t)fd_from, argv[1], -1, -1);
-file_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, file_perm);
-check99((ssize_t)fd_to, argv[2], fd_from, -1);
-lenr = 1024;
-while (lenr == 1024)
-{
-lenr = read(fd_from, buffer, 1024);
-check98(lenr, argv[1], fd_from, fd_to);
-lenw = write(fd_to, buffer, lenr);
-if (lenw != lenr)
-lenw = -1;
-check99(lenw, argv[2], fd_from, fd_to);
-}
-close_to = close(fd_to);
-close_from = close(fd_from);
-check100(close_to, fd_to);
-check100(close_from, fd_from);
-return (0);
+	if (f0 < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", f0);
+		free(buffer);
+		exit(100);
+	}
 }
