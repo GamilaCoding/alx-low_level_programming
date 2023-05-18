@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_dlisint - print a double linked list
- * @h: header of double linked list
+ * print_dlisint - print all the elements of a
+ * dlistint_t list
+ * @h: head of list
  * Return: number of nodes
  */
 size_t print_dlistint(const dlistint_t *h)
