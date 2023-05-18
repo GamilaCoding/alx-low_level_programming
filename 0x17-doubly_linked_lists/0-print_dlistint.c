@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 /**
  * print_dlisint - print a double linked list
  * @h: header of double linked list
