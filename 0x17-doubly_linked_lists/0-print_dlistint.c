@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+
 /**
  * print_dlisint - print a double linked list
  * @h: header of double linked list
@@ -7,23 +8,23 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	size_t i = 0;
-	int iniprint = 0;
+size_t i = 0;
+int iniprint = 0;
 
-	for (i = 0; h != NULL; i++)
+for (i = 0; h != NULL; i++)
+{
+	if (h->prev != NULL && iniprint == 0)
+		{
+		h = h->prev;
+		continue;
+		}
+	else if (h->prev == NULL)
 	{
-		if (h->prev != NULL && iniprint == 0)
-		{
-			h = h->prev;
-			continue;
-		}
-		else if (h->prev == NULL)
-		{
-			iniprint = 1;
-			i = 0;
-		}
-		printf("%i\n", h->n);
-		h = h->next;
+		iniprint = 1;
+		i = 0;
 	}
-	return (i);
+	printf("%i\n", h->n);
+	h = h->next;
+}
+return (i);
 }
