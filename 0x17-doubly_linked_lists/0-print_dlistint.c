@@ -14,18 +14,18 @@ int iniprint = 0;
 
 for (i = 0; h != NULL; i++)
 {
-	if (h->prev != NULL && iniprint == 0)
-		{
-		h = h->prev;
-		continue;
-		}
-	else if (h->prev == NULL)
-	{
-		iniprint = 1;
-		i = 0;
-	}
-	printf("%i\n", h->n);
-	h = h->next;
+if (h->prev != NULL && iniprint == 0)
+{
+h = h->prev;
+continue;
+}
+else if (h->prev == NULL)
+{
+iniprint = 1;
+i = 0;
+}
+printf("%i\n", h->n);
+h = h->next;
 }
 return (i);
 }
